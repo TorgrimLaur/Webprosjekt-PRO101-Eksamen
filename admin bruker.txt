@@ -1,0 +1,5 @@
+wordpress 
+username: admin
+password : test123 
+
+Må importe med All in-One Wp Migration plugin
