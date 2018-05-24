@@ -14,7 +14,7 @@ get_header(); ?>
 
 		<div id="content">
 
-			<div id="inner-content" class="wpbf-container wpbf-container-center">
+			<div id="inner-content" class="wpbf-container wpbf-container-center wpbf-padding-medium">
 
 				<div class="wpbf-grid wpbf-main-grid wpbf-grid-<?php echo esc_attr( $grid_gap ); ?>">
 

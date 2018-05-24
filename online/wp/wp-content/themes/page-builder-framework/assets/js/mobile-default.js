@@ -15,6 +15,13 @@
 		mobileToggle();
 	});
 
+	$('.wpbf-mobile-menu a').click(function() {
+		var attribute = $(this).attr('href');
+		if(attribute.match("^#") || attribute.match("^/#") ) {
+			mobileToggle();
+		}
+	});
+
 	// get desktop breakpoint value from body class
 	var DesktopBreakpointClass = $('body').attr("class").match(/wpbf-desktop-breakpoint-[\w-]*\b/);
 	if( DesktopBreakpointClass !== null ) {

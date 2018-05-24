@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 		<div id="content">
 
-			<div id="inner-content" class="wpbf-container wpbf-container-center">
+			<div id="inner-content" class="wpbf-container wpbf-container-center wpbf-padding-medium">
 
 				<main id="main" class="wpbf-main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 					

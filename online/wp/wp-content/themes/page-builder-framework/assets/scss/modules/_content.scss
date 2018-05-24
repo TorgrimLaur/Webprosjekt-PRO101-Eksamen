@@ -62,11 +62,11 @@ body {
 	word-wrap:					break-word;
 }
 
-// Inner Content (could also go with wpbf-margin-medium instead of CSS)
-#inner-content {
-	padding-top: 				$padding-medium;
-	padding-bottom:				$padding-medium;
-}
+// Inner Content (deprecated)
+// #inner-content {
+// 	padding-top: 				$padding-medium;
+// 	padding-bottom:				$padding-medium;
+// }
 
 /* ========================================================================
 Blog

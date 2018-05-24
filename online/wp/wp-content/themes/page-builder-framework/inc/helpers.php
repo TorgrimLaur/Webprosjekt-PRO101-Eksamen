@@ -19,7 +19,7 @@ function wpbf_inner_content() {
 	// checking if template is set to full width (returns true if so)
 	$fullwidth = $options ? in_array( 'full-width', $options ) : false;
 
-	$inner_content = $fullwidth ? false : '<div id="inner-content" class="wpbf-container wpbf-container-center">';
+	$inner_content = $fullwidth ? false : '<div id="inner-content" class="wpbf-container wpbf-container-center wpbf-padding-medium">';
 
 	if ( function_exists( 'wpbf_premium' ) ) {
 
@@ -175,6 +175,27 @@ function wpbf_archive_header() {
 			the_archive_title( '<h1 class="entry-title archive-title">', '</h1>' );
 			the_archive_description( '<div class="taxonomy-description">', '</div>' );
 
+		}
+
+	}
+
+}
+
+// Responsive Breakpoints
+if( !function_exists( 'wpbf_has_responsive_breakpoints' ) ) {
+
+	function wpbf_has_responsive_breakpoints() {
+
+		// stop here if premium add-on doesn't exist
+		if( !function_exists( 'wpbf_premium' ) ) return false;
+
+		// check if custom breakpoints are set, otherwise return false
+		$wpbf_settings = get_option( 'wpbf_settings' );
+
+		if ( !empty( $wpbf_settings['wpbf_breakpoint_medium'] ) || !empty( $wpbf_settings['wpbf_breakpoint_desktop'] ) ) {
+			return true;
+		} else {
+			return false;
 		}
 
 	}
@@ -607,7 +628,6 @@ function wpbf_sub_menu_animation() {
 }
 
 // Navigation Attributes
-
 function wpbf_navigation_attributes() {
 
 	// vars
