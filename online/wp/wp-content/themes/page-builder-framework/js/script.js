@@ -31,19 +31,8 @@ jQuery(function($){
 
 jQuery(function($){
   // buttons
-  $('#btn_more_info_fjerdingen_vulkan').hide();
-  $('#btn_more_info_fjerdingen_kvadraturen').hide();
-  $('#btn_more_info_vulkan_kvadraturen').hide();
-
   $('#btns_bus').hide();
   $('#btns_walk').hide();
-
-
-  // maps
-  $('#distance_fjerdingen_vulkan').hide();
-  $('#distance_fjerdingen_kvadraturen').hide();
-  $('#distance_vulkan_kvadraturen').hide();
-
 
   // text box
   $('#te_more_information').hide();
@@ -64,44 +53,43 @@ jQuery(function($){
     $('#btns_bus').show();
   });
 
-
-
-  $('#btn_fjerdingen_vulkan').click(function(){
+    //walk
+  $('#btn_walk_fjerdingen_vulkan').click(function(){
     $('#map_image_box').attr('src','https://tek.westerdals.no/~sankar17/wp/wp-content/uploads/2018/05/fjerd-brenn-vulk2.png');
-
-    $('#distance_fjerdingen_kvadraturen').hide();
-    $('#distance_vulkan_kvadraturen').hide();
-
-    $('#distance_fjerdingen_vulkan').show();
-    $('#btn_more_info_fjerdingen_vulkan').show();
+    $('#te_information').text("For å komme seg mellom Fjerdingen og vulkan er det lettest å gå langs akerselva. Adresse vulkan 14 elns æøå");
     });
 
 
-  $('#btn_fjerdingen_kvadraturen').click(function(){
+  $('#btn_walk_fjerdingen_kvadraturen').click(function(){
     $("#map_image_box").attr('src','https://tek.westerdals.no/~sankar17/wp/wp-content/uploads/2018/05/kvad-fjerd2.png');
-
-    $('#distance_fjerdingen_vulkan').hide();
-    $('#distance_vulkan_kvadraturen').hide();
-
-    $('#distance_fjerdingen_kvadraturen').show();
+    $('#te_information').text("For å komme seg mellom Fjerdingen og kvadraturen går man gjennom karl johan.  æøå");
   });
 
 
-  $('#btn_vulkan_kvadraturen').click(function(){
+  $('#btn_walk_vulkan_kvadraturen').click(function(){
     $("#map_image_box").attr('src','https://tek.westerdals.no/~sankar17/wp/wp-content/uploads/2018/05/kvad-brenn-vulk2.png');
-
-    $('#distance_fjerdingen_vulkan').hide();
-    $('#distance_fjerdingen_kvadraturen').hide();
-
-    $('#distance_vulkan_kvadraturen').show();
+    $('#te_information').text("For å komme seg mellom vulkan og kvadraturen tar man bus ;) er det lettest å gå langs akerselva. Adresse vulkan 14 elns æøå");
   });
 
-});
+  // bus
 
-// Change content of textbox
-jQuery(function($){
-  $('#btn_more_info_fjerdingen_vulkan').click(function(){
-    $('#te_more_information').text("For å komme seg mellom Fjerdingen og vulkan er det lettest å gå langs akerselva. Men man kan også ta bus.");
-    $('#te_more_information').toggle();
+  $('#btn_bus_fjerdingen_vulkan').click(function(){
+    $('#map_image_box').attr('src','https://tek.westerdals.no/~sankar17/wp/wp-content/uploads/2018/05/fjerd-brenn-vulk2.png');
+    $('#te_information').text("For å komme seg mellom Fjerdingen og vulkan er det lettere å gå enn å ta bus. Adresse vulkan 14 elns æøå");
+    });
+
+
+  $('#btn_bus_fjerdingen_kvadraturen').click(function(){
+    $("#map_image_box").attr('src','https://tek.westerdals.no/~sankar17/wp/wp-content/uploads/2018/05/kvad-fjerd.png');
+    $('#te_information').text("Hei. Adresse vulkan 14 elns æøå");
+
   });
+
+
+  $('#btn_bus_vulkan_kvadraturen').click(function(){
+    $("#map_image_box").attr('src','https://tek.westerdals.no/~sankar17/wp/wp-content/uploads/2018/05/kvad-brenn-vulk.png');
+    $('#te_information').text("Her er det smart å ta bus. Adresse vulkan 14 elns æøå");
+
+  });
+
 });
